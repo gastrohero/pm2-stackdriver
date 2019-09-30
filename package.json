@@ -1,0 +1,28 @@
+{
+  "name": "@gastrohero/pm2-stackdriver",
+  "version": "0.0.1",
+  "description": "PM2 stackdriver logging module",
+  "main": "app.js",
+  "dependencies": {
+    "@google-cloud/logging": "^5.3.1",
+    "pm2": "^3.5.1",
+    "pmx": "beta"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gastrohero/pm2-stackdrivergit"
+  },
+  "config": {
+    "pm2_stackdriver_on_google": false,
+    "pm2_stackdriver_enabled": false
+  },
+  "apps": [
+    {
+      "merge_logs": true,
+      "max_memory_restart": "200M",
+      "script": "app.js"
+    }
+  ],
+  "author": "Gastro Hero GmbH",
+  "license": "MIT"
+}
