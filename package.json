@@ -1,6 +1,6 @@
 {
   "name": "@gastrohero/pm2-stackdriver",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "PM2 stackdriver logging module",
   "main": "app.js",
   "dependencies": {
