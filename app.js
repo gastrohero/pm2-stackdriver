@@ -22,8 +22,8 @@ pm2.Client.launchBus(function(err, bus) {
       config.projectId = conf.pm2_stackdriver_projectId
     }
 
-    if (conf.pm2_stackdriver_credentials) {
-      config.credentials = conf.pm2_stackdriver_credentials
+    if (conf.pm2_stackdriver_keyFile) {
+      config.credentials = conf.pm2_stackdriver_keyFile
     }
   }
 
