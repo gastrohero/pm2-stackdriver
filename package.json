@@ -10,7 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gastrohero/pm2-stackdrivergit"
+    "url": "git://github.com/gastrohero/pm2-stackdriver.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "config": {
     "pm2_stackdriver_on_google": false,
