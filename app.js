@@ -23,7 +23,7 @@ pm2.Client.launchBus(function(err, bus) {
     }
 
     if (conf.pm2_stackdriver_keyFile) {
-      config.credentials = conf.pm2_stackdriver_keyFile
+      config.keyFile = conf.pm2_stackdriver_keyFile
     }
   }
 
