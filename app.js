@@ -35,10 +35,6 @@ pm2.Client.launchBus(function(err, bus) {
     if (log.process.name === packageJSON.name) {
       return;
     }
-    if (!conf.stackdriver) {
-      return
-    }
-
 
     // Selects the log to write to
     const logger = logging.log('pm2-info');
