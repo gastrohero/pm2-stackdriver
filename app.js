@@ -5,6 +5,10 @@ const packageJSON = require('./package');
 
 const conf = pmx.initModule();
 
+function formatMessage (string) {
+  return string.replace(new RegExp('.*?: '), '')
+}
+
 pm2.Client.launchBus(function(err, bus) {
   if (err) {
     return console.error('PM2 Stackdriver', err);
@@ -47,7 +51,7 @@ pm2.Client.launchBus(function(err, bus) {
     };
 
     // Prepares a log entry
-    const entry = logger.entry(metadata, log.data);
+    const entry = logger.entry(metadata, formatMessage(log.data));
 
     // Writes the log entry
     logger.write(entry);
@@ -68,7 +72,7 @@ pm2.Client.launchBus(function(err, bus) {
 
 
     // Prepares a log entry
-    const entry = logger.entry(metadata, log.data);
+    const entry = logger.entry(metadata, formatMessage(log.data));
 
     // Writes the log entry
     logger.write(entry);
